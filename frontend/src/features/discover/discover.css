@@ -1,0 +1,188 @@
+.discover-section {
+    background-color: rgba(69, 133, 138, 0.7);
+    padding: 2rem 0;
+    display: block;
+    border-bottom: 1px solid #bb222f;
+    margin-bottom: -0.3rem;
+}
+
+.discover-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.discover-title {
+    text-align: left;
+    font-size: 2.5em;
+    margin-bottom: 1.5rem;
+    font-weight: bolder;
+    font-family: 'Agency FB', sans-serif;
+    text-transform: uppercase;
+    margin-left: 0;
+    max-width: 100%;
+    line-height: 1.2;
+    width: 100%;
+    padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+    .discover-title {
+        margin-left: 80px;
+        max-width: 50%;
+        padding: 0;
+    }
+}
+
+.discover-title-span.one {
+    color: #e40000c5;
+}
+
+.discover-title-span.two {
+    color: #f0f0f0e7;
+}
+
+.discover-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.discover-button {
+    background-color: transparent;
+    border: 1px solid #bb222f;
+    color: #3d3a3a;
+    padding: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    font-family: 'Agency FB', sans-serif;
+    font-size: 1.5em;
+    width: 200px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.discover-button.small {
+    width: 150px;
+    height: 75px;
+}
+
+.discover-button.large {
+    width: 250px;
+    height: 125px;
+}
+
+.discover-button.extra-large {
+    width: 300px;
+    height: 150px;
+}
+
+.discover-button:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(187, 34, 47, 0.8),
+        transparent
+    );
+    transition: all 0.6s;
+}
+
+.discover-button:hover:before {
+    left: 100%;
+}
+
+.discover-button:hover {
+    background-color: #bb222f;
+    color: #f0f0f0e7;
+}
+
+.social-media-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.social-media-icon {
+    color: #3d3a3a;
+    font-size: 2rem;
+    transition: transform 0.3s ease, animation 0.5s ease-in-out;
+}
+
+@keyframes levitate {
+    0%, 100% { transform: translateY(0) rotateY(180deg); }
+    50% { transform: translateY(-10px) rotateY(180deg); }
+}
+
+.social-media-icon:hover {
+    transform: rotateY(180deg);
+    animation: levitate 1s infinite;
+}
+
+.social-media-icon i {
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-media-icon:hover i {
+    transform: rotateY(180deg);
+}
+
+.social-media-icon:hover i.fa-facebook-f {
+    color: #1877F2;
+}
+
+.social-media-icon:hover i.fa-instagram {
+    color: #E4405F;
+}
+
+.social-media-icon:hover i.fa-youtube {
+    color: #FF0000;
+}
+
+@media (max-width: 768px) {
+    .discover-container {
+        padding: 1.5rem 1rem;
+        min-height: auto;
+    }
+    
+    .discover-title {
+        font-size: 1.8em;
+        text-align: center;
+        margin-left: 0;
+        max-width: 100%;
+    }
+    
+    .discover-buttons {
+        gap: 1rem;
+    }
+    
+    .discover-button {
+        width: 150px;
+        height: 75px;
+        font-size: 1.2em;
+    }
+    
+    .social-media-icons {
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+    }
+}
+

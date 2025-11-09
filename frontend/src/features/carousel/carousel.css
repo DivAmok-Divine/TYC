@@ -1,0 +1,177 @@
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    margin-top: 0;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 1.8s ease;
+    height: 100%;
+}
+
+.carousel-item {
+    flex: 0 0 100%;
+    position: relative;
+    height: 100%;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.carousel-caption h2 {
+    font-style: italic;
+    margin: 0;
+    font-size: 2.85em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: -0.1em;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 20px 25px;
+    font-size: 2em;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.carousel-control.prev,
+.carousel-control.next {
+    top: 93%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: 1px solid white;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    margin: 0 5px;
+    font-size: 0;
+    transition: background-color 0.2s ease;
+}
+
+.carousel-control.prev {
+    left: 50%;
+    margin-left: -25px;
+}
+
+.carousel-control.next {
+    right: 50%;
+    margin-right: -25px;
+}
+
+.carousel-control.active {
+    background-color: white;
+}
+
+.carousel-control.prev:hover,
+.carousel-control.next:hover,
+.carousel-control.prev:focus,
+.carousel-control.next:focus {
+    background-color: transparent;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.carousel {
+    height: 100vh;
+}
+
+.carousel-caption h1 {
+    font-size: 1.7em;
+    font-style: italic;
+    margin-top: 10px;
+    font-weight: 300;
+    text-transform: none;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.concert-events-btn {
+    position: absolute;
+    bottom: 5%;
+    left: 20px;
+    background-color: rgba(187, 34, 47, 0.8);
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    border: 1px solid #fff;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.concert-events-btn:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(187, 34, 47, 0.8),
+        transparent
+    );
+    transition: all 0.6s;
+}
+
+.concert-events-btn:hover:before {
+    left: 100%;
+}
+
+.concert-events-btn:hover {
+    background-color: rgba(50, 194, 204, 0.7);
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .carousel-caption h2 {
+        font-size: 1.8em;
+    }
+    
+    .carousel-caption h1 {
+        font-size: 1.2em;
+    }
+    
+    .concert-events-btn {
+        font-size: 0.9em;
+        padding: 8px 16px;
+    }
+}
+
