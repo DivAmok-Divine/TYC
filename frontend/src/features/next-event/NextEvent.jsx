@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './next-event.css'
 
 const NextEvent = () => {
@@ -19,7 +20,7 @@ const NextEvent = () => {
             <button className="book-seat-btn">Book A Seat</button>
           </div>
         </div>
-        <a href="/events" className="event-button">View All Events</a>
+        <Link to="/events" className="event-button">View All Events</Link>
       </div>
     </section>
   )

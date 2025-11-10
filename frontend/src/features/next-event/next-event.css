@@ -77,6 +77,8 @@
     filter: brightness(100%);
     position: relative;
     left: -6px;
+    contain: layout style paint;
+    transform: translateZ(0);
 }
 
 .event-image img:hover {

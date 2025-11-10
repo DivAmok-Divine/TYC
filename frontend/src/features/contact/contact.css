@@ -1,0 +1,391 @@
+.contact-section {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 6rem 0 4rem;
+    min-height: 100vh;
+    width: 100%;
+    background-image: url('/images/1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.contact-title {
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    font-family: 'Agency FB', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.contact-subtitle {
+    text-align: center;
+    font-size: 1.3em;
+    margin-bottom: 3rem;
+    color: #f0f0f0e7;
+    font-family: 'Agency FB', sans-serif;
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.info-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+}
+
+.info-icon {
+    font-size: 2em;
+    color: #32c2cc;
+    margin-bottom: 0.5rem;
+}
+
+.info-card h3 {
+    color: #32c2cc;
+    font-family: 'Agency FB', sans-serif;
+    font-size: 1.8em;
+    margin-bottom: 0.8rem;
+    text-transform: uppercase;
+}
+
+.info-card p {
+    color: #ffffff;
+    margin: 0.5rem 0;
+    font-size: 1.1em;
+    line-height: 1.6;
+    font-family: 'Agency FB', sans-serif;
+}
+
+.contact-form-wrapper {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 2.5rem;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    font-family: 'Agency FB', sans-serif;
+    font-size: 1.2em;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    padding: 1rem;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.95);
+    color: #333;
+    font-size: 1em;
+    font-family: 'Agency FB', sans-serif;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+}
+
+.form-group select {
+    cursor: pointer;
+}
+
+.form-group select:focus {
+    outline: none;
+    border-color: #bb222f;
+    box-shadow: 0 0 0 3px rgba(187, 34, 47, 0.2);
+    background-color: #ffffff;
+}
+
+.phone-input-wrapper {
+    display: flex;
+    align-items: stretch;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.95);
+    overflow: hidden;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.phone-input-wrapper:focus-within {
+    border-color: #bb222f;
+    box-shadow: 0 0 0 3px rgba(187, 34, 47, 0.2);
+    background-color: #ffffff;
+}
+
+.phone-code-select {
+    flex: 0 0 140px;
+    max-width: 140px;
+    border: none;
+    background-color: transparent;
+    color: #333;
+    font-size: 1em;
+    font-family: 'Agency FB', sans-serif;
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.8rem center;
+    padding: 1rem 2rem 1rem 1rem;
+    border-right: 2px solid rgba(255, 255, 255, 0.3);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.phone-code-select:hover {
+    color: #bb222f;
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+.phone-code-select:focus {
+    outline: none;
+    color: #bb222f;
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+.phone-number-input {
+    flex: 1 1 auto;
+    min-width: 0;
+    padding: 1rem;
+    border: none;
+    background-color: transparent;
+    color: #333;
+    font-size: 1em;
+    font-family: 'Agency FB', sans-serif;
+    transition: background-color 0.3s ease;
+    cursor: text;
+    width: 100%;
+}
+
+.phone-number-input::placeholder {
+    color: #999;
+}
+
+.phone-number-input:focus {
+    outline: none;
+    border-color: #bb222f;
+    box-shadow: 0 0 0 3px rgba(187, 34, 47, 0.2);
+    background-color: #ffffff;
+}
+
+.phone-input-wrapper:focus-within .phone-code-select {
+    color: #bb222f;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #bb222f;
+    box-shadow: 0 0 0 3px rgba(187, 34, 47, 0.2);
+    background-color: #ffffff;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.submit-button {
+    background-color: #bb222f;
+    color: #ffffff;
+    padding: 0.8rem 2rem;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    font-family: 'Agency FB', sans-serif;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    align-self: flex-start;
+    width: auto;
+}
+
+.submit-button:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(50, 194, 204, 0.7),
+        transparent
+    );
+    transition: all 0.6s;
+}
+
+.submit-button:hover:before {
+    left: 100%;
+}
+
+.submit-button:hover {
+    background-color: rgba(50, 194, 204, 0.7);
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.social-links {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.social-links h3 {
+    color: #ffffff;
+    font-family: 'Agency FB', sans-serif;
+    font-size: 1.8em;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.social-media-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.social-media-icon {
+    color: #ffffff;
+    font-size: 2rem;
+    transition: transform 0.3s ease, animation 0.5s ease-in-out;
+    contain: layout style paint;
+    transform: translateZ(0);
+}
+
+@keyframes levitate {
+    0%, 100% { transform: translateY(0) rotateY(180deg); }
+    50% { transform: translateY(-10px) rotateY(180deg); }
+}
+
+.social-media-icon:hover {
+    transform: rotateY(180deg);
+    animation: levitate 1s infinite;
+}
+
+.social-media-icon i {
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-media-icon:hover i {
+    transform: rotateY(180deg);
+}
+
+.social-media-icon:hover i.fa-facebook-f {
+    color: #1877F2;
+}
+
+.social-media-icon:hover i.fa-instagram {
+    color: #E4405F;
+}
+
+.social-media-icon:hover i.fa-youtube {
+    color: #FF0000;
+}
+
+.social-media-icon:hover i.fa-twitter {
+    color: #1DA1F2;
+}
+
+@media (max-width: 968px) {
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .phone-input-wrapper {
+        flex-direction: column;
+    }
+
+    .phone-code-select {
+        width: 100%;
+        min-width: 100%;
+        border-right: none;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 5rem 0 3rem;
+    }
+
+    .contact-title {
+        font-size: 2em;
+    }
+
+    .contact-subtitle {
+        font-size: 1.1em;
+    }
+
+    .contact-container {
+        padding: 0 1rem;
+    }
+
+    .contact-form-wrapper {
+        padding: 1.5rem;
+    }
+
+    .info-card {
+        padding: 1rem;
+    }
+
+    .social-icons {
+        gap: 1.5rem;
+    }
+}
+

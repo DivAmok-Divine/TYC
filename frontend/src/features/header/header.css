@@ -7,17 +7,24 @@ header {
     width: 100%;
     z-index: 1000;
     transition: background-color 0.3s ease;
-    background-color: rgba(149, 216, 221, 0.7);
+    background-color: rgba(149, 216, 221, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 header.scrolled {
-    background-color: rgba(50, 194, 204, 0.7);
+    background-color: rgba(50, 194, 204, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 header nav {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 100%;
 }
 
 header ul {
@@ -26,19 +33,28 @@ header ul {
     margin: 0;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    padding-right: 0;
 }
 
 header li {
     position: relative;
 }
 
-header a {
+header a,
+header a:visited {
     text-decoration: none;
     color: #FFFFFF;
     font-weight: bold;
     padding: 0.5rem 1rem;
     display: block;
     transition: background-color 0.3s ease;
+    white-space: nowrap;
+}
+
+header ul > li:last-child > a {
+    padding-right: 1rem;
 }
 
 header a:hover {
@@ -58,6 +74,7 @@ header ul ul {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 0 0 10px 10px;
     overflow: hidden;
+    text-align: left;
 }
 
 header li:hover > ul {
@@ -112,17 +129,19 @@ header .logo a:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-
-.logo-text a:first-child {
     font-size: 1.2em;
     font-weight: bold;
     line-height: 1.2;
+    text-align: left;
 }
 
-.logo-text a:last-child {
-    font-size: 0.8em;
+.logo-text span {
+    display: block;
+    text-align: center;
+    font-size: 0.5em;
     line-height: 1.2;
+    margin-top: 0.2em;
+    width: 100%;
 }
 
 @media (max-width: 768px) {

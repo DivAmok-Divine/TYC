@@ -10,6 +10,7 @@
     display: flex;
     transition: transform 1.8s ease;
     height: 100%;
+    contain: layout style paint;
 }
 
 .carousel-item {

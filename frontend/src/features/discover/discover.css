@@ -14,7 +14,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .discover-title {
@@ -27,15 +27,26 @@
     margin-left: 0;
     max-width: 100%;
     line-height: 1.2;
-    width: 100%;
-    padding: 0 1rem;
+    width: auto;
+    padding: 0;
+    align-self: center;
 }
 
 @media (min-width: 768px) {
     .discover-title {
-        margin-left: 80px;
+        /* Align with first card: calculate where centered buttons start */
+        /* Buttons: 4 * 200px + 3 * 2rem = 896px, centered in container */
+        align-self: flex-start;
+        margin-left: calc((100% - (4 * 200px + 3 * 2rem)) / 2);
         max-width: 50%;
-        padding: 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    .discover-title {
+        /* For 1200px container with 1rem padding each side: content area = 1200-32=1168px */
+        /* Buttons: 896px, centered = (1168-896)/2 = 136px from content area start */
+        margin-left: 136px;
     }
 }
 
@@ -52,6 +63,8 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 2rem;
+    width: 100%;
+    align-self: center;
 }
 
 .discover-button {
@@ -118,12 +131,16 @@
     justify-content: center;
     gap: 2rem;
     margin-top: 2rem;
+    width: 100%;
+    align-self: center;
 }
 
 .social-media-icon {
     color: #3d3a3a;
     font-size: 2rem;
     transition: transform 0.3s ease, animation 0.5s ease-in-out;
+    contain: layout style paint;
+    transform: translateZ(0);
 }
 
 @keyframes levitate {

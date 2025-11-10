@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import './carousel.css'
 
 const Carousel = () => {
@@ -52,12 +53,16 @@ const Carousel = () => {
       >
         {carouselItems.map((item, index) => (
           <div key={index} className="carousel-item">
-            <img src={item.image} alt={`Choir Image ${index + 1}`} />
+            <img 
+              src={item.image} 
+              alt={`Choir Image ${index + 1}`}
+              loading={index === 0 ? "eager" : "lazy"}
+            />
             <div className="carousel-caption">
               <h2>{item.title}</h2>
               {item.subtitle && <h1>{item.subtitle}</h1>}
             </div>
-            <a href="#" className="concert-events-btn">Concerts & Events</a>
+            <Link to="/events" className="concert-events-btn">Concerts & Events</Link>
           </div>
         ))}
       </div>

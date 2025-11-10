@@ -1,0 +1,172 @@
+.under-construction-section {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 8rem 0 4rem;
+    min-height: 100vh;
+    width: 100%;
+    background-image: url('/images/1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.construction-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 4rem 3rem;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.construction-icon {
+    font-size: 5em;
+    color: #32c2cc;
+    margin-bottom: 2rem;
+    animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.construction-title {
+    font-size: 3.5em;
+    color: #ffffff;
+    font-family: 'Agency FB', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.construction-message {
+    font-size: 1.5em;
+    color: #f0f0f0e7;
+    font-family: 'Agency FB', sans-serif;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.construction-submessage {
+    font-size: 1.2em;
+    color: #ffffff;
+    font-family: 'Agency FB', sans-serif;
+    margin-bottom: 3rem;
+    opacity: 0.9;
+}
+
+.construction-buttons {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.construction-button {
+    padding: 1rem 2.5rem;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+    font-family: 'Agency FB', sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.construction-button.primary {
+    background-color: #bb222f;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
+.construction-button.secondary {
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
+.construction-button:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(50, 194, 204, 0.7),
+        transparent
+    );
+    transition: all 0.6s;
+}
+
+.construction-button:hover:before {
+    left: 100%;
+}
+
+.construction-button.primary:hover {
+    background-color: rgba(50, 194, 204, 0.7);
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.construction-button.secondary:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    .under-construction-section {
+        padding: 6rem 0 3rem;
+    }
+
+    .construction-container {
+        padding: 3rem 2rem;
+    }
+
+    .construction-icon {
+        font-size: 4em;
+    }
+
+    .construction-title {
+        font-size: 2.5em;
+    }
+
+    .construction-message {
+        font-size: 1.2em;
+    }
+
+    .construction-submessage {
+        font-size: 1em;
+    }
+
+    .construction-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .construction-button {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './header.css'
 
 const Header = () => {
@@ -7,48 +8,48 @@ const Header = () => {
       <nav>
         <ul>
           <li className="logo">
-            <a href="/">
-              <img src="/images/logo/logo.jpg" className="header-logo" alt="Tamale Youth Choir Logo" />
-            </a>
-            <a className="logo-text" href="/">
+            <Link to="/">
+              <img src="/images/logo/tycLogo.png" className="header-logo" alt="Tamale Youth Choir Logo" />
+            </Link>
+            <Link className="logo-text" to="/">
               Tamale Youth Choir <br /> 
               <span style={{ fontSize: '0.5em' }}>For God & Our Country</span>
-            </a>
+            </Link>
           </li>
-          <li><a href="/">Home</a></li>
-          <li><a href="/events">Concerts & Events</a></li>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/events">Concerts & Events</Link></li>
           <li>
             <a href="#">TYC</a>
             <ul>
-              <li><a href="/our-history">Our History</a></li>
-              <li><a href="/about-choir">About the Choir</a></li>
-              <li><a href="/mission-vision">Our Mission & Vision</a></li>
-              <li><a href="/choir-members">Choir Members</a></li>
-              <li><a href="/artistic-director">Artistic Director</a></li>
-              <li><a href="/our-team">Our Team</a></li>
+              <li><Link to="/our-history">Our History</Link></li>
+              <li><Link to="/about-choir">About the Choir</Link></li>
+              <li><Link to="/mission-vision">Our Mission & Vision</Link></li>
+              <li><Link to="/choir-members">Choir Members</Link></li>
+              <li><Link to="/artistic-director">Artistic Director</Link></li>
+              <li><Link to="/our-team">Our Team</Link></li>
             </ul>
           </li>
           <li>
             <a href="#">Gallery</a>
             <ul>
-              <li><a href="/music">Music</a></li>
-              <li><a href="/videos">Videos</a></li>
-              <li><a href="/images">Images</a></li>
-              <li><a href="/discography">Discography</a></li>
+              <li><Link to="/music">Music</Link></li>
+              <li><Link to="/videos">Videos</Link></li>
+              <li><Link to="/images">Images</Link></li>
+              <li><Link to="/discography">Discography</Link></li>
             </ul>
           </li>
           <li>
             <a href="#">Learning & Connection</a>
             <ul>
-              <li><a href="/tyc-academy">TYC Academy</a></li>
-              <li><a href="/auditions">Auditions</a></li>
+              <li><Link to="/tyc-academy">TYC Academy</Link></li>
+              <li><Link to="/auditions">Auditions</Link></li>
             </ul>
           </li>
           <li>
             <a href="#">More</a>
             <ul>
-              <li><a href="/donate">Donate</a></li>
-              <li><a href="/contact">Contact</a></li>
+              <li><Link to="/donate">Donate</Link></li>
+              <li><Link to="/contact">Contact</Link></li>
             </ul>
           </li>
         </ul>
